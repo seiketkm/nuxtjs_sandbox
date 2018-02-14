@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -13,14 +14,26 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  /**
+   * CSS
+   */
+  css: ['element-ui/lib/theme-chalk/index.css'],
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
   /*
+  ** Plugin
+  */
+  plugins: [
+    '~plugins/element-ui',
+    {src: '~plugins/element-ui', ssr: false}
+  ], 
+  /*
   ** Build configuration
   */
   build: {
+    vendor: ['axios', 'element-ui'],
     /*
     ** Run ESLint on save
     */
