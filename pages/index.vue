@@ -1,7 +1,7 @@
 <template>
   <section class="container">
+    <side-menu/>
     <div>
-      <app-logo/>
       <h1 class="title">
         mashup_viewer
       </h1>
@@ -21,10 +21,10 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
-
+import SideMenu from '~/components/SideMenu.vue'
 export default {
   components: {
-    AppLogo
+    SideMenu
   }
 }
 import axios from 'axios'

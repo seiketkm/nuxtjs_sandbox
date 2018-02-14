@@ -14,26 +14,19 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /**
-   * CSS
-   */
-  css: ['element-ui/lib/theme-chalk/index.css'],
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
-  /*
-  ** Plugin
-  */
-  plugins: [
-    '~plugins/element-ui',
-    {src: '~plugins/element-ui', ssr: false}
-  ], 
+
+  modules:[
+    '@nuxtjs/bulma'
+  ],
   /*
   ** Build configuration
   */
   build: {
-    vendor: ['axios', 'element-ui'],
+    vendor: ['axios'],
     /*
     ** Run ESLint on save
     */
